@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Fraud Detection System</h1>
+        <form action="/predict" method="POST">
+            <div class="form-group">
+                <label for="step">Step (Time Unit)</label>
+                <input type="text" name="step" id="step" required>
+            </div>
+            <div class="form-group">
+                <label for="type">Transaction Type</label>
+                <select name="type" id="type">
+                    <option value="CASH_IN">CASH_IN</option>
+                    <option value="CASH_OUT">CASH_OUT</option>
+                    <option value="DEBIT">DEBIT</option>
+                    <option value="TRANSFER">TRANSFER</option>
+                    <option value="PAYMENT">PAYMENT</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount of Transaction</label>
+                <input type="number" name="amount" id="amount" required>
+            </div>
+            <div class="form-group">
+                <label for="nameOrg">Sender Account Name</label>
+                <input type="text" name="nameOrg" id="nameOrg">
+            </div>
+            <div class="form-group">
+                <label for="oldbalanceOrg">Sender Old Balance</label>
+                <input type="number" name="oldbalanceOrg" id="oldbalanceOrg" required>
+            </div>
+            <!-- <div class="form-group">
+                <label for="newbalanceOrg">Sender New Balance</label>
+                <input type="number" name="newbalanceOrg" id="newbalanceOrg" required>
+            </div> -->
+            <div class="form-group">
+                <label for="newbalanceOrig">Sender New Balance</label>
+                <input type="number" name="newbalanceOrig" id="newbalanceOrig" required>
+            </div>            
+            <div class="form-group">
+                <label for="nameDest">Receiver Account Name</label>
+                <input type="text" name="nameDest" id="nameDest" >
+            </div>
+            <div class="form-group">
+                <label for="oldbalanceDest">Receiver Old Balance</label>
+                <input type="number" name="oldbalanceDest" id="oldbalanceDest" required>
+            </div>
+            <div class="form-group">
+                <label for="newbalanceDest">Receiver New Balance</label>
+                <input type="number" name="newbalanceDest" id="newbalanceDest" required>
+            </div>
+            <button type="submit">Predict</button>
+        </form>
+
+        <div class="result">
+            <h2>{{ prediction_text }}</h2>
+        </div>
+    </div>
+</body>
+</html>
