@@ -48,10 +48,10 @@
 <h2 id="project-structure">Project Structure</h2>
 <p>The project files and their purposes are as follows:</p>
 <ul>
-    <li><strong>data/</strong>: Contains the dataset used for model training and testing.</li>
-    <li><strong>notebooks/</strong>: Jupyter notebooks with model implementation, data preprocessing, and exploratory data analysis.</li>
-    <li><strong>scripts/</strong>: Python scripts for model training, hyperparameter tuning, and evaluation.</li>
-    <li><strong>images/</strong>: Contains visualizations and model performance outputs.</li>
+    <li><strong>data</strong>: Contains the dataset used for model training and testing.</li>
+    <li><strong>notebooks</strong>: Jupyter notebooks with model implementation, data preprocessing, and exploratory data analysis.</li>
+    <li><strong>scripts</strong>: Python scripts for model training, hyperparameter tuning, and evaluation.</li>
+    <li><strong>images</strong>: Contains visualizations and model performance outputs.</li>
     <li><strong>README.md</strong>: Project documentation.</li>
     <li><strong>requirements.txt</strong>: Required libraries and dependencies.</li>
 </ul>
@@ -84,48 +84,54 @@ cd Fraud-Detection-Analysis---ML
 <table>
     <thead>
         <tr>
-            <th>Metric</th>
-            <th>Logistic Regression</th>
-            <th>SVC</th>
-            <th>Random Forest</th>
-            <th>Decision Tree</th>
+            <th>Model</th>
+            <th>Accuracy</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th>F1-Score</th>
+            <th>AUC-ROC</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>Accuracy</td>
-            <td>XX%</td>
-            <td>XX%</td>
-            <td><strong>YY%</strong></td>
-            <td>XX%</td>
+            <td>Logistic Regression</td>
+            <td>0.998558</td>
+            <td>1.000000</td>
+            <td>0.875</td>
+            <td>0.933333</td>
+            <td>0.988102</td>
         </tr>
         <tr>
-            <td>Precision</td>
-            <td>XX%</td>
-            <td>XX%</td>
-            <td><strong>YY%</strong></td>
-            <td>XX%</td>
+            <td>Support Vector Classifier (SVC)</td>
+            <td>0.996395</td>
+            <td>0.823529</td>
+            <td>0.875</td>
+            <td>0.848485</td>
+            <td>N/A</td>
         </tr>
         <tr>
-            <td>Recall</td>
-            <td>XX%</td>
-            <td>XX%</td>
-            <td><strong>YY%</strong></td>
-            <td>XX%</td>
+            <td>Random Forest Classifier</td>
+            <td>0.995674</td>
+            <td>0.777778</td>
+            <td>0.875</td>
+            <td>0.823529</td>
+            <td>0.998541</td>
         </tr>
         <tr>
-            <td>AUC-ROC Score</td>
-            <td>XX</td>
-            <td>XX</td>
-            <td><strong>YY</strong></td>
-            <td>XX</td>
+            <td>Decision Tree Classifier</td>
+            <td>0.997116</td>
+            <td>0.875000</td>
+            <td>0.875</td>
+            <td>0.875000</td>
+            <td>0.936771</td>
         </tr>
     </tbody>
 </table>
 
+
 <h2 id="deployment">Deployment</h2>
 <p>The final model is deployed for real-time fraud detection. Below is an example output of a transaction being classified as fraudulent.</p>
-<img src="images/deployment_output.png" alt="Model Deployment Output" />
+<img src="images/deployment_output" alt="Model Deployment Output" />
 
 <h2 id="contributors">Contributors</h2>
 <ul>
