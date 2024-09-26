@@ -131,7 +131,7 @@ cd Fraud-Detection-Analysis---ML
 
 <h2 id="deployment">Deployment</h2>
 <p>The final model is deployed for real-time fraud detection. Below is an example output of a transaction being classified as fraudulent.</p>
-<img src="images/deployment_output" alt="Model Deployment Output" />
+<img src="deployment_output" alt="Model Deployment Output" />
 
 <h2 id="contributors">Contributors</h2>
 <ul>
