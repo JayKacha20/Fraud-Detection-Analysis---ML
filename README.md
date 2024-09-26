@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fraud Detection Analysis - Machine Learning</title>
 </head>
 <body>
 
@@ -131,7 +130,7 @@ cd Fraud-Detection-Analysis---ML
 
 <h2 id="deployment">Deployment</h2>
 <p>The final model is deployed for real-time fraud detection. Below is an example output of a transaction being classified as fraudulent.</p>
-<img src="deployment_output" alt="Model Deployment Output" />
+<img src="[deployment_output](https://github.com/JayKacha20/Fraud-Detection-Analysis---ML/blob/main/deployment_output.png)" alt="Model Deployment Output" />
 
 <h2 id="contributors">Contributors</h2>
 <ul>
